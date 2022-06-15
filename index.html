@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet"> 
+    <title>Figuras geométricas PLATZI</title>
+</head>
+<body id="body">
+    <header>
+        <h1>Figuras Geométricas</h1>
+        <p>Primer taller del curso práctico de JavaScript</p>
+    </header>
+
+    <nav class="structure">
+        <section class="cuadros-base cuadrados">
+            <h2>Calcula el área y perímetro de un cuadrado</h2>
+            <form action="">
+                <label for="inputCuadrado">
+                    Escribe cuánto mide cada lado de tu cuadrado:
+                </label>
+                <input id="inputCuadrado" type="number" class="input"/>
+                <div class="botones">
+                    <button type="button" onclick="perimetroCuadrados()" class="buttons">
+                        Calcular perímetro
+                    </button>
+                    <button type="button" onclick="areaCuadrados()" class="buttons">
+                        <a href="#modal">Calcular área</a>
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section class="cuadros-base triangulos">
+            <h2>Calcula el área y perímetro de un triángulo</h2>
+            <form action="">
+                <label for="inputTriangulo">
+                    Escribe cuánto mide la base y la altura de tu triángulo:
+                </label>
+                <input id="inputTriangulo" type="number" class="input" />
+                <div class="botones">
+                    <button type="button" onclick="perimetroTriangulos()" class="buttons">
+                        Calcular perímetro
+                    </button>
+                    <button type="button" onclick="areaTriangulos()" class="buttons">
+                        Calcular área
+                    </button>
+                </div>
+            </form>
+        </section>
+    
+        <section class="cuadros-base circulos">
+            <h2>Calcula el área y perímetro de un círculo</h2>
+            <form action="">
+                <label for="inputCirculo">
+                    Escribe cuánto mide el radio de tu círculo:
+                </label>
+                <input id="inputCirculo" type="number" class="input"/>
+                <div class="botones">           
+                    <button type="button" onclick="perimetroCirculos()" class="buttons">
+                        Calcular perímetro
+                    </button>
+                    <button type="button" onclick="areaCirculos()" class="buttons">
+                        Calcular área
+                    </button>
+                </div>
+            </form>
+        </section>
+    </nav>
+
+    <section id="modal" class="modal">
+        <div class="modal-container">
+            <figure class="modal-picture">
+                <img src="./imgs/undraw_calculator_re_alsc.svg" class="modal-img">
+            </figure>
+
+            <h2 class="modal-title">¡Bien hecho!</h2>
+
+            <p class="modal-parrafo">El área del cuadrado es "areaCuadrados()"</p>
+
+            <a href="#body" class="modal-close">Regresar</a>
+        </div>
+
+    </section>
+
+    <script src="./figuras.js"></script>
+</body>
+</html>

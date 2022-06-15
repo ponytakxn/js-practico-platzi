@@ -33,3 +33,31 @@ function areaCuadrados(){
     const area = areaCuadrado(value);
     alert(area);
 };
+
+function perimetroTriangulos(){
+    const input = document.getElementById("inputTriangulo");
+    const value = input.value;
+    const perimetro = perimetroTriangulo(value);
+    alert(perimetro);
+};
+
+function areaTriangulos(){
+    const input = document.getElementById("inputTriangulo");
+    const value = input.value;
+    const area = areaTriangulo(value);
+    alert(area);
+};
+
+function perimetroCirculos(){
+    const input = document.getElementById("inputCirculo");
+    const value = input.value;
+    const perimetro = perimetroCirculo(value);
+    alert(perimetro);
+};
+
+function areaCirculos(){
+    const input = document.getElementById("inputCirculo");
+    const value = input.value;
+    const area = areaCirculo(value);
+    alert(area);
+};

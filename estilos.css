@@ -1,0 +1,173 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+}
+
+header{
+    display: grid;
+    place-items: center;
+    color: white;
+}
+
+nav {
+    display: flex;
+    row-gap: 10;
+    justify-content: center;
+}
+
+.cuadros-base {
+    display: grid;
+    grid-template-rows: auto 1fr auto auto;
+    width: 600px;
+    height: 400px;
+    text-align: center;
+    place-items: center;
+    border: 1px solid rgb(247, 247, 247);
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.cuadros-base form{
+    display: grid;
+    grid-template-rows: auto 1fr auto auto;
+    
+}
+
+label {
+    margin-bottom: 20px;
+}
+
+.input{
+    width: 250px;
+    justify-self: center;
+}
+
+.cuadros-base form .botones {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.buttons {
+    width: 150px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.cuadrados{
+    background-color: #6be4fa;
+}
+
+.cuadrados .buttons{
+    background-color: #124257;
+    color: #f4fcff;
+    border: 1px solid #6be4fa;
+}
+
+.triangulos{
+    background-color: #f56c97;
+}
+
+.triangulos .buttons{
+    background-color: #753358;
+    color: white;
+    border: 1px solid #753358;
+}
+
+.circulos{
+    background-color: #e3cf45;
+}
+
+.circulos .buttons{
+    background-color: #b6ae0f;
+    border: 1px solid #b6ae0f;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    display: flex;
+
+    --opacity: 0;
+    --pointer: none;
+
+    opacity: var(--opacity);
+    pointer-events: var(--pointer);
+    transition: opacity .5s;
+}
+
+.modal:target{
+    --opacity: 1;
+    --pointer: unset;
+}
+
+.modal-container{
+    margin: auto;
+    background-color: white;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    overflow: hidden;
+    text-align: center;
+    padding: 2.5em 1.5em;
+    border-radius: 1em;
+}
+
+.modal:target .modal-container{
+    animation: show 1s .5s backwards;
+}
+
+@keyframes show {
+    0%{
+        transform: translateY(-150vh);
+    }
+}
+
+.modal-picture{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 400px;
+    margin-bottom: 2em;
+}
+
+.modal:target .modal-picture{
+    animation: scale .5s 1.5s;
+}
+
+@keyframes scale {
+    0%{
+        transform: scale(0);
+    }
+    
+}
+
+.modal-img{
+    width: 100%;
+    display: block;
+}
+
+.modal-title{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.modal-parrafo{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    line-height: 1.5;
+}
+
+.modal-close{
+    display: inline-block;
+    border: 1px solid;
+    padding: 1em 2em;
+    text-decoration: none;
+    font-weight: 700;
+    color: #333;
+    border-radius: .4em;
+}
