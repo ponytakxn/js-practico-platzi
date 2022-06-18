@@ -31,7 +31,9 @@ function areaCuadrados(){
     const input = document.getElementById("inputCuadrado");
     const value = input.value;
     const area = areaCuadrado(value);
-    alert(area);
+    
+    const areaC = document.getElementById("AreaC");
+    areaC.innerText = `El área del cuadrado es: ${area}cm2`;
 };
 
 function perimetroTriangulos(){
